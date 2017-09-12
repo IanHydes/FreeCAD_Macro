@@ -1,11 +1,24 @@
+
+################################################################################################
+#                                                                                              #
+# The code is pulled from:                                                                     #
+# https://www.freecadweb.org/wiki/index.php?title=Macro_View_Rotation                          #
+# which perhaps bears some resemblance to:                                                     #
+# https://github.com/FreeCAD/FreeCAD-macros/blob/master/FCRotateView.FCMacro                   #
+#                                                                                              #
+# It has the addition of two zoom buttons on the rotate view macro to allow a finer control    #
+# of the zoom level as the Zoom level on my mouse scroll wheel was too coarse an increment.    #
+#                                                                                              #
+################################################################################################
+
+# use:
+# execfile("C:/Users/username/AppData/Roaming/FreeCAD/View_RotZoom.FCMacro")
+# to run macro from python console for a windows 7 machine
+
 import PySide
 from PySide import QtGui, QtCore
 from pivy import coin
 from math import pi
-
-# use:
-# execfile("C:/Users/ianhydes/AppData/Roaming/FreeCAD/View_RotZoom.FCMacro")
-# to run macro from python console
 
 def find_centre():
 	xmax = xmin = ymax = ymin = zmax = zmin = 0	
